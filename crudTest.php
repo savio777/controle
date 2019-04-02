@@ -95,6 +95,7 @@ try{
 
 // DELETE
 
+/*
 $sql = 'DELETE FROM estoque WHERE id = ?';
 
 $id = 1;
@@ -108,4 +109,4 @@ try {
     echo 'ID: '.$id.' excluido com sucesso';
 } catch (PDOException $erro) {
     echo "Erro: ".$erro->getMessage();
-}
+}*/

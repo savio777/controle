@@ -1,3 +1,13 @@
+<?php 
+require_once '../crud.php'; 
+
+$crud = new Crud;
+
+// consertar a impressão do array e imprimir tags da tabela
+$resultado = $crud->lerTodoEstoque();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,26 +18,20 @@
 <body>
     <table>
         <tr>
-            <th>id</th>
-            <th>produto</th>
-            <th>preço</th>
-            <th>quantidade</th>
+            <td><b>Id</b></td>
+            <td><b>Produto</b></td>
+            <td><b>Preço</b></td>
+            <td><b>Quantidade</b></td>
         </tr>
+        <?php foreach($resultado as $i){ ?>
         <tr>
-            <?php 
-                require_once '../crud.php';
-
-                // imprimir valores do estoque aqui
-                $crud = new Crud;
-
-                // consertar a impressão do array e imprimir tags da tabela
-                $resultado = $crud->lerTodoEstoque();
-                foreach($resultado as $i){
-                    echo("<td>${i}</td>");
-                }
-            ?>
+            <td> <?php echo($i['id']);?> </td>
+            <td> <?php echo($i['nomeProduto']); ?></td>
+            <td> <?php echo($i['preco']); ?></td>
+            <td> <?php echo($i['quantidade']); ?></td>
         </tr>
+        <?php } ?>
     </table>
-    
+
 </body>
 </html>

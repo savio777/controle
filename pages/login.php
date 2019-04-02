@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="./estilo.css">
 </head>
 <body>
-
-    <form action="../login.php" method="POST">
+    <!-- necessita refatorar nomes de arquivos e action -->
+    <form action="../loginTest.php" method="POST">
         <p>Usuario</p>
         <input name="usuario">
         <p>Senha</p>
