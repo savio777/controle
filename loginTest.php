@@ -19,7 +19,7 @@ if($_POST){
         //echo(var_dump($result));
 
         if($result){
-            header('Location: pages/estoque.html');
+            header('Location: pages/estoque.php');
         }else{
             echo('<br><b>usuario ou senha incorretos</b><br>');
         }
