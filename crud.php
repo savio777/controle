@@ -1,14 +1,15 @@
 <?php 
 require_once 'conexao.php';
+require_once '../models/produto.php';
 
 class Crud{
     
     private $con = NULL;
-    //private $id = NULL;
+    //private $produto = NULL;
 
     public function __construct(){
         $this->con = getConexao();
-        //($_GET) ? $this->id = $_GET['id'] : $this->id = NULL; 
+        //$this->produto = new Produto();
     }
 
     // ler todos os valores do estoque
@@ -27,8 +28,17 @@ class Crud{
         }
     }
 
-    // editar registros
+    // adicionar registros
+    public function adicionarProduto(Produto $produto){
+        try {
+            $sql = '';
+        } catch (PDOException $erro) {
+            echo($erro->getMessage());
+        }
+    }
 
+
+    // editar registros
 
 
     // apagar registros
