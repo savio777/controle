@@ -46,15 +46,22 @@ class CrudProduto{
 
 
     // editar registros
-
+    public function editarProduto(Produto $produto){
+        try {
+            // pesquisar update mysql
+            $sql = 'UPDATE FROM estoque ';
+        } catch (PDOException $erro) {
+            echo($erro->getMessage());
+        }
+    }
 
     // apagar registros
-    public function apagarProduto($id){
+    public function apagarProduto(Produto $produto){
         try {
             $sql = 'DELETE FROM estoque WHERE id=?';
 
             $pstm = $this->con->prepare($sql);
-            $pstm->bindParam(1, $id);
+            $pstm->bindParam(1, $produto->getId());
 
             $pstm->execute();
         } catch (PDOException $erro) {
