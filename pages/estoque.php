@@ -1,7 +1,8 @@
 <?php 
-require_once '../crud.php'; 
+// concertar require
+require_once '../crud/crudProduto.php'; 
 
-$crud = new Crud;
+$crud = new CrudProduto;
 
 // consertar a impressão do array e imprimir tags da tabela
 $resultado = $crud->lerTodoEstoque();
