@@ -2,7 +2,7 @@
 require_once 'conexao.php';
 require_once '../models/produto.php';
 
-class Crud{
+class CrudProduto{
     
     private $con = NULL;
     //private $produto = NULL;
@@ -31,7 +31,14 @@ class Crud{
     // adicionar registros
     public function adicionarProduto(Produto $produto){
         try {
-            $sql = '';
+            $sql = 'INSERT INTO estoque (nomeProduto, preco, quantidade) VALUES (?,?,?)';
+
+            $pstm = $this->con->prepare($sql);
+            $pstm->bindParam(1, $produto->getNomeProduto());
+            $pstm->bindParam(2, $produto->getPreco());
+            $pstm->bindParam(3, $produto->getQuantidade());
+
+            $pstm->execute();
         } catch (PDOException $erro) {
             echo($erro->getMessage());
         }
