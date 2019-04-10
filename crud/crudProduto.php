@@ -56,12 +56,12 @@ class CrudProduto{
     }
 
     // apagar registros
-    public function apagarProduto(Produto $produto){
+    public function apagarProduto($id){
         try {
             $sql = 'DELETE FROM estoque WHERE id=?';
 
             $pstm = $this->con->prepare($sql);
-            $pstm->bindParam(1, $produto->getId());
+            $pstm->bindParam(1, $id);
 
             $pstm->execute();
         } catch (PDOException $erro) {

@@ -1,11 +1,12 @@
 <?php
 
-require_once '../crud.php';
+require_once '../crud/crudProduto.php';
 
-$crud = new Crud();
+$crud = new CrudProduto();
 
 if($_GET){
     $crud->apagarProduto($_GET['id']);
+    
     header('Location: ../pages/estoque.php');
 }else{
     echo('nenhuma requisição');
