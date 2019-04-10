@@ -1,5 +1,5 @@
 <?php 
-require_once 'conexao.php';
+require_once '../con/conexao.php';
 require_once '../models/produto.php';
 
 class CrudProduto{
