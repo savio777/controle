@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="pages/estilo.css">
 </head>
 <body>
-    <p><a href="pages/login.php">Logar</a></p>
-    <p><a href="pages/estoque.php">Estoque</a></p>
-    <p><a href="pages/cadastroProduto.php">Cadastro Produtos</a></p>
+    <form action="../controller/testUser.php" method="POST">
+        Usuario <input name="usuario"><br><br>
+        Senha <input type="password" name="senha"><br><br>
+        <input type="submit" value="Entrar">
+    </form>
 </body>
 </html>
