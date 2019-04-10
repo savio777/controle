@@ -1,5 +1,5 @@
 <?php 
-// concertar require
+
 require_once '../crud/crudProduto.php'; 
 
 $crud = new CrudProduto;
@@ -17,6 +17,8 @@ $resultado = $crud->lerTodoEstoque();
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <a href="../index.html"><input type="button" value="Voltar"></a><br><br>
+
     <table>
         <tr>
             <td><b>Id</b></td>
