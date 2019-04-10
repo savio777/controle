@@ -7,12 +7,6 @@ class Usuario{
     private $senha;
     private $permissaoRoot;
 
-    public function __construct($nomeUser, $senha, $permissaoRoot){
-        $this->nomeUser = $nomeUser;
-        $this->senha = $senha;
-        $this->permissaoRoot = $permissaoRoot;
-    }
-
     public function getId(){
         return $this->id;
     }
