@@ -30,10 +30,10 @@ $resultado = $crud->lerTodoEstoque();
         </tr>
         <?php foreach($resultado as $i){ ?>
         <tr>
-            <td > <?php echo($i['id']);?> </td>
-            <td > <?php echo($i['nomeProduto']); ?></td>
-            <td > <?php echo($i['preco']); ?></td>
-            <td > <?php echo($i['quantidade']); ?></td>
+            <td name="id"> <?php echo($i['id']);?> </td>
+            <td name="nomeProduto"> <?php echo($i['nomeProduto']); ?></td>
+            <td name="preco"> <?php echo($i['preco']); ?></td>
+            <td name="quantidade"> <?php echo($i['quantidade']); ?></td>
             <!-- editar e apagar registro -->
             <td><a href="../controller/testeEditar.php?id=<?php echo($i['id']); ?>"> 
                 <img src='../img/icons8-editar-16.png'> </a></td>
