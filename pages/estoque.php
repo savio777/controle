@@ -17,7 +17,7 @@ $resultado = $crud->lerTodoEstoque();
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <a href="../index.html"><input type="button" value="Voltar"></a><br><br>
+    <a href="painel.html"><input type="button" value="Voltar"></a><br><br>
 
     <table>
         <tr>
