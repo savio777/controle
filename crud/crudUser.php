@@ -17,8 +17,9 @@ class CrudUser{
             $sql = 'SELECT * FROM usuario WHERE nomeUser = ? AND senha = ?';
 
             $pstm = $this->con->prepare($sql);
-            $pstm->bindParam(1, $usuario->getNomeUser());
-            $pstm->bindParam(2, $usuario->getSenha());
+            $pstm->bindValue(1, $usuario->getNomeUser());
+            $pstm->bindValue(2, $usuario->getSenha());
+            $pstm->execute();
 
             if($pstm->fetchAll()){
                 return True;
@@ -27,8 +28,6 @@ class CrudUser{
             }
         }catch(PDOException $erro){
             echo($erro->getMessage());
-
-            return False;
         }
     }
 

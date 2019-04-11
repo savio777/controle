@@ -1,6 +1,6 @@
 <?php
 
-require_once '../crud/crudUser';
+require_once '../crud/crudUser.php';
 require_once '../models/usuario.php';
 
 $crud = NULL;
