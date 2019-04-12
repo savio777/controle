@@ -35,7 +35,7 @@ $resultado = $crud->lerTodoEstoque();
             <td name="preco"> <?php echo($i['preco']); ?></td>
             <td name="quantidade"> <?php echo($i['quantidade']); ?></td>
             <!-- editar e apagar registro -->
-            <td><a href="../controller/testeEditar.php?id=<?php echo($i['id']); ?>"> 
+            <td><a href="../pages/editarproduto.php?id=<?php echo($i['id']); ?>"> 
                 <img src='../img/icons8-editar-16.png'> </a></td>
             <td><a href="../controller/testeExcluir.php?id=<?php echo($i['id']); ?>"> 
                 <img src='../img/icons8-excluir-16.png'> </a></td>

@@ -19,12 +19,26 @@ class CrudProduto{
         
             $pstm = $this->con->prepare($sql);
             $pstm->execute();
-            $resultado = $pstm->fetchAll();
+            //$resultado = $pstm->fetchAll();
 
-            return $resultado;
-        } catch (PDOException $err) {
-            $erro['erro'] = $err->getMessage(); 
-            return $erro;
+            return $pstm->fetchAll();
+        } catch (PDOException $erro) {
+            echo($erro->getMessage());
+        }
+    }
+
+    // retornar produto pelo valor do id
+    public function retornarPorId($id){
+        try{
+            $sql = 'SELECT * FROM estoque WHERE id=?';
+
+            $pstm = $this->con->prepare($sql);
+            $pstm->bindParam(1, $id);
+            $pstm->execute();
+
+            return $pstm->fetchAll();
+        }catch(PDOException $erro){
+            echo($erro->getMessage());
         }
     }
 
@@ -49,7 +63,15 @@ class CrudProduto{
     public function editarProduto(Produto $produto){
         try {
             // pesquisar update mysql
-            $sql = 'UPDATE FROM estoque ';
+            $sql = 'UPDATE estoque SET nomeProduto=?, preco=?, quantidade=? WHERE id=?';
+
+            $pstm = $this->con->prepare($sql);
+            $pstm->bindValue(1, $produto->getNomeProduto());
+            $pstm->bindValue(2, $produto->getPreco());
+            $pstm->bindValue(3, $produto->getQuantidade());
+            $pstm->bindValue(4, $produto->getId());
+
+            $pstm->execute();
         } catch (PDOException $erro) {
             echo($erro->getMessage());
         }
