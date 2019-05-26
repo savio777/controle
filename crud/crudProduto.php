@@ -90,8 +90,22 @@ class CrudProduto{
             echo($erro->getMessage());
         }
     }
-    
+
+    // pesquisar produto por nome
+    public function pesquisar($nomeProduto){
+        try{
+            // variavel criada para o PDO entender que a % faz parte do bind
+            $str = "%{$nomeProduto}%";
+
+            $sql = "SELECT * FROM estoque WHERE nomeProduto LIKE ?";
+
+            $pstm = $this->con->prepare($sql);
+            $pstm->bindParam(1, $str);
+
+            $pstm->execute();
+            return $pstm->fetchAll();
+        }catch(PDOException $erro){
+            echo $erro->getMessage();
+        }
+    }    
 }
-
-
-?>
