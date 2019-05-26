@@ -28,7 +28,7 @@ $resultado = $crud->lerTodoEstoque();
         <form class="col s6" action="../pages/pesquisarProduto.php" method="GET">
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="pesquisar" name="pesquisar">
+                    <input class="validate" id="pesquisar" name="pesquisar">
                     <label for="pesquisar" class="active">Nome Produto</label>
                 </div>
                 <div class="input-field col s6">                
