@@ -19,7 +19,9 @@ $linhas = $crud->lerTodos();
 
 <body>
     <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="painel_agenda.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
+    <a class="waves-effect waves-light btn" href="painel_agenda.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
+    <!-- botão cadastrar -->
+    <a class="waves-effect waves-light btn" href="cadastrar_agenda.html"><i class="small material-icons left">add</i>Cadastrar</a><br><br><br>
     <!-- pesquisar -->
     <div class="row">
         <form class="col s6" action="../pages/pesquisa_agenda.php" method="GET">
