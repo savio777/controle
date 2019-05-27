@@ -63,7 +63,6 @@ class CrudAgenda{
 
     public function editarAgenda(Agenda $agenda){
         try {
-            // pesquisar update mysql
             $sql = 'UPDATE agenda SET nome=?, numero=?, rua=?, bairro=?, cep=?, cidade=?, estado=?, pais=?
             WHERE id=?';
 
@@ -99,7 +98,6 @@ class CrudAgenda{
 
     public function pesquisar($nome){
         try{
-            // variavel criada para o PDO entender que a % faz parte do bind
             $str = "%{$nome}%";
 
             $sql = "SELECT * FROM agenda WHERE nome LIKE ?";

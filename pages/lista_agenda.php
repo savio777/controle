@@ -22,7 +22,7 @@ $linhas = $crud->lerTodos();
     <a class="waves-effect waves-light btn" href="painel_agenda.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
     <!-- pesquisar -->
     <div class="row">
-        <form class="col s6" action="../pages/pesquisarProduto.php" method="GET">
+        <form class="col s6" action="../pages/pesquisa_agenda.php" method="GET">
             <div class="row">
                 <div class="input-field col s6">
                     <input class="validate" id="pesquisar" name="pesquisar">
