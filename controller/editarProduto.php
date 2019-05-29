@@ -9,9 +9,11 @@ $crud = NULL;
 if ($_POST) {
     $produto = new Produto($_POST['nomeProduto'], $_POST['preco'], $_POST['quantidade']);
     $produto->setId($_POST['id']);
+    
     $crud = new CrudProduto();
     $crud->editarProduto($produto);
-    header('Location: ../pages/estoque.php');
+
+    header('Location: ../pages/lista_produto.php');
 } else {
     echo ('nenhuma requisição');
 }

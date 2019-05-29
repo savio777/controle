@@ -35,7 +35,7 @@ if ($_GET) {
         <!-- botão voltar -->
 
         <div class="row">
-            <form class="col 12" action="../controller/testeEditar.php" method="POST">
+            <form class="col 12" action="../controller/editarProduto.php" method="POST">
                 <div class="row">
                     <input type="hidden" value="<?php echo ($i['id']) ?>" name="id">
                     <div class="input-field col s6">

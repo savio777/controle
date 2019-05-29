@@ -25,7 +25,7 @@ $resultado = $crud->lerTodoEstoque();
     <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
     <!-- pesquisar -->
     <div class="row">
-        <form class="col s6" action="../pages/pesquisarProduto.php" method="GET">
+        <form class="col s6" action="../pages/pesquisa_produto.php" method="GET">
             <div class="row">
                 <div class="input-field col s6">
                     <input class="validate" id="pesquisar" name="pesquisar">
@@ -60,9 +60,9 @@ $resultado = $crud->lerTodoEstoque();
                     <td name="preco"> <?php echo ($i['preco']); ?></td>
                     <td name="quantidade"> <?php echo ($i['quantidade']); ?></td>
                     <!-- editar e apagar registro -->
-                    <td><a href="../pages/editarproduto.php?id=<?php echo ($i['id']); ?>">
+                    <td><a href="../pages/editar_produto.php?id=<?php echo ($i['id']); ?>">
                             <i class="small material-icons">create</i></a></td>
-                    <td><a href="../controller/testeExcluir.php?id=<?php echo ($i['id']); ?>">
+                    <td><a href="../controller/excluirProduto.php?id=<?php echo ($i['id']); ?>">
                             <i class="small material-icons">delete</i></a></td>
                 </tr>
             <?php }

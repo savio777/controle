@@ -14,7 +14,7 @@ if($_POST){
 
     $crud->adicionarProduto($produto);
 
-    header('Location: ../pages/estoque.php');
+    header('Location: ../pages/lista_produto.php');
 }else{
     echo('nenhuma requisição');
 }

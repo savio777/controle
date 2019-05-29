@@ -47,9 +47,9 @@ if (!(isset($_GET['pesquisar']))) {
                     <td name="preco"> <?php if ($data != NULL) { echo $i['preco']; }?></td>
                     <td name="quantidade"> <?php if ($data != NULL) { echo $i['quantidade']; }?></td>
                     <!-- editar e apagar registro -->
-                    <td><a href="../pages/editarproduto.php?id=<?php if ($data != NULL) { echo $i['id']; }?>">
+                    <td><a href="../pages/editar_produto.php?id=<?php if ($data != NULL) { echo $i['id']; }?>">
                         <i class="small material-icons">create</i></a></td>
-                    <td><a href="../controller/testeExcluir.php?id=<?php if ($data != NULL) { echo $i['id']; } ?>">
+                    <td><a href="../controller/excluirProduto.php?id=<?php if ($data != NULL) { echo $i['id']; } ?>">
                         <i class="small material-icons">delete</i></a></td>
                 </tr>
             <?php }

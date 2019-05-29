@@ -6,6 +6,8 @@ require_once '../models/usuario.php';
 $crud = NULL;
 $usuario = NULL;
 
+session_start();
+
 if($_POST){
     $crud = new CrudUser();
     $usuario = new Usuario();
@@ -16,6 +18,8 @@ if($_POST){
 
     // se $crud->testUserPainel der True
     if($crud->testUserPainel($usuario)){
+        $_SESSION['usuario_logado'] = $usuario;
+
         header('Location: ../pages/painel.html');
     }else{
         echo('<br><b>usuario ou senha incorretos</b><br>');
@@ -24,4 +28,9 @@ if($_POST){
     
 }else{
     echo('nenhuma requisicão');
+}
+
+// função para deslogar
+if($_GET){
+    unset($_SESSION['usuario_logado']);
 }
