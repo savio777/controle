@@ -31,11 +31,10 @@ CREATE TABLE agenda(
     pais VARCHAR(50) NOT NULL
 );
 
-/*CREATE TABLE vendas(
+CREATE TABLE tickets(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    vendidos VARCHAR(100) NOT NULL,  -- (chave_do_produto)-(quantidade_vendidos) como se fosse um dicionario do python 
-    totalVendido FLOAT NOT NULL,
-    fazer chave estrangeira referenciando os produtos do estoque
-);*/
-
--- tabela de produtos comprados
+    titulo VARCHAR(50) NOT NULL,
+    descricao VARCHAR(150),
+    criado DATETIME,
+    prioridade INT
+);
