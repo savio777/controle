@@ -18,25 +18,25 @@
 <body>
     <nav>
         <div class="nav-wrapper blue darken-1">
-            <a href="painel.html" class="brand-logo"><img src="../img/logo.png" width="100"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="../pages/lista_produto.php">Produtos</a></li>
-                <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i class="material-icons small">exit_to_app</i></a></li>
-            </ul>
+            <div class="container">
+                <a href="painel.html" class="brand-logo"><img src="../img/logo.png" width="100"></a>
+                <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../pages/lista_produto.php">Produtos</a></li>
+                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i
+                                class="material-icons small">exit_to_app</i>Sair</a></li>
+                </ul>
+
+            </div>
         </div>
     </nav>
-    <!--
-    <main>
-        <div class="card-panel teal lighten-2">
-            <h4>Bem Vindo</h4>
-        </div>
-        <br><br><br>
-        <p><a href="lista_produto.php" class="waves-effect waves-light btn-large">Estoque</a></p>
-        <p><a href="cadastrar_produto.html" class="waves-effect waves-light btn-large">Cadastrar Produto</a></p>
-        <p><a href="painel_agenda.html" class="waves-effect waves-light btn-large">Painel Agenda</a></p>
-    </main>
--->
+
+    <ul class="sidenav" id="mobile-teste">
+        <li><a href="../pages/lista_produto.php">Produtos</a></li>
+        <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i
+                    class="material-icons small left">exit_to_app</i></a></li>
+    </ul>
+
     <br><br><br>
 
     <footer class="page-footer indigo darken-4">
@@ -64,10 +64,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, options);
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
         });
     </script>
 </body>
