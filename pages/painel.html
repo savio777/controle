@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
-        p{
+        p {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper blue darken-1">
+            <a href="painel.html" class="brand-logo"><img src="../img/logo.png" width="100"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="../pages/lista_produto.php">Produtos</a></li>
+                <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i class="material-icons small">exit_to_app</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--
     <main>
         <div class="card-panel teal lighten-2">
             <h4>Bem Vindo</h4>
@@ -25,15 +36,14 @@
         <p><a href="cadastrar_produto.html" class="waves-effect waves-light btn-large">Cadastrar Produto</a></p>
         <p><a href="painel_agenda.html" class="waves-effect waves-light btn-large">Painel Agenda</a></p>
     </main>
-
+-->
     <br><br><br>
 
-    <footer class="page-footer">
+    <footer class="page-footer indigo darken-4">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Site Demo Taokey</h5>
-                    <p class="grey-text text-lighten-4">Trabalho para adquirir nota no Marcão kkk</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
@@ -50,11 +60,16 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2019 Copyright Text
+                © 2019 SDeV Copyright
             </div>
         </div>
     </footer>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+    </script>
 </body>
 
 </html>

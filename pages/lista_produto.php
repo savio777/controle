@@ -22,8 +22,12 @@ $resultado = $crud->lerTodoEstoque();
 
 <body>
     <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
+    <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
+    <!-- botão para cadastrar produtos -->
+    <a class="waves-effect waves-light btn" href="cadastrar_produto.html"><i class="small material-icons left">add</i>Cadastrar Produto</a>
+    
     <!-- pesquisar -->
+    <br><br>
     <div class="row">
         <form class="col s6" action="../pages/pesquisa_produto.php" method="GET">
             <div class="row">
@@ -31,7 +35,7 @@ $resultado = $crud->lerTodoEstoque();
                     <input class="validate" id="pesquisar" name="pesquisar">
                     <label for="pesquisar" class="active">Nome Produto</label>
                 </div>
-                <div class="input-field col s6">                
+                <div class="input-field col s6">
                     <button class="btn waves-effect waves-light" type="submit" name="action">Pesquisar
                         <i class="material-icons right">send</i>
                     </button>
@@ -66,7 +70,7 @@ $resultado = $crud->lerTodoEstoque();
                             <i class="small material-icons">delete</i></a></td>
                 </tr>
             <?php }
-        ?>
+            ?>
         </tbody>
     </table>
 
