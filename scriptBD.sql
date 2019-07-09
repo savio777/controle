@@ -38,3 +38,11 @@ CREATE TABLE tickets(
     criado DATETIME,
     prioridade INT  -- 1, 2, 3
 );
+
+CREATE TABLE agenda(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(30) NOT NULL,
+    cor VARCHAR(10),
+    comeco DATETIME NOT NULL,
+    fim DATETIME NOT NULL 
+);
