@@ -36,5 +36,5 @@ CREATE TABLE tickets(
     titulo VARCHAR(50) NOT NULL,
     descricao VARCHAR(150),
     criado DATETIME,
-    prioridade INT
+    prioridade INT  -- 1, 2, 3
 );
