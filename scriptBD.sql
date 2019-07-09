@@ -19,18 +19,6 @@ CREATE TABLE estoque(
     quantidade INT NOT NULL
 );
 
-CREATE TABLE agenda(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL UNIQUE,
-    numero INT NOT NULL,
-    rua VARCHAR(50) NOT NULL,
-    bairro VARCHAR(50) NOT NULL,
-    cep INT NOT NULL,
-    cidade VARCHAR(50) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
-    pais VARCHAR(50) NOT NULL
-);
-
 CREATE TABLE tickets(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(50) NOT NULL,
@@ -43,6 +31,7 @@ CREATE TABLE agenda(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(30) NOT NULL,
     cor VARCHAR(10),
+    cortexto VARCHAR(10),
     comeco DATETIME NOT NULL,
-    fim DATETIME NOT NULL 
+    fim DATETIME
 );
