@@ -25,7 +25,7 @@ if ($_GET['id']) {
     <!-- botão voltar -->
     <a class="waves-effect waves-light btn" href="lista_tickets.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
     <!-- botão para cadastrar tickets -->
-    <a class="waves-effect waves-light btn" href="excluirTicket.php?id=<?php echo($_GET['id'])?>">
+    <a class="waves-effect waves-light btn" href="../controller/excluirTicket.php?id=<?php echo($_GET['id'])?>">
         <i class="small material-icons left">done</i>Feito</a>
 
     <h1 class="card-panel  blue lighten-2">Descrição do Ticket</h1>

@@ -40,7 +40,7 @@ $resultado = $crud->lerTodosTickets();
                         <div class="card-action">
                             <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">done</i></a>
-                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                            <a href="detalhes_ticket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ $resultado = $crud->lerTodosTickets();
                         <div class="card-action">
                             <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">done</i></a>
-                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                            <a href="detalhes_ticket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ $resultado = $crud->lerTodosTickets();
                         <div class="card-action">
                             <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">done</i></a>
-                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                            <a href="detalhes_ticket.php?id=<?php echo ($i['id']) ?>">
                                 <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
