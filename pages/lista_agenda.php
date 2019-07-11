@@ -50,7 +50,8 @@ $resultado = $crud->lerTodaAgenda();
                             start: '<?php echo($i['comeco']) ?>',
                             end: '<?php echo($i['fim']) ?>',
                             color: '<?php echo($i['cor']) ?>',
-                            textColor: '<?php echo($i['cortexto']) ?>'
+                            textColor: '<?php echo($i['cortexto']) ?>',
+                            url: 'detalhes_agenda.php?id=<?php echo($i['id'])?>'
                         },
                     <?php } ?>
 
@@ -90,7 +91,6 @@ $resultado = $crud->lerTodaAgenda();
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>

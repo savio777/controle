@@ -32,7 +32,7 @@ class CrudAgenda{
             $pstm->bindParam(1, $id);
             $pstm->execute();
 
-            return $pstm->fetchAll();
+            return $pstm->fetchObject();
         }catch(PDOException $erro){
             echo($erro->getMessage());
         }
@@ -40,13 +40,15 @@ class CrudAgenda{
 
     public function adicionarAgenda(Agenda $agenda){
         try {
-            $sql = 'INSERT INTO agenda (titulo, cor, comeco, fim) VALUES (?, ?, ?, ?)';
+            $sql = 'INSERT INTO agenda (titulo, descricao, cor, cortexto, comeco, fim) VALUES (?, ?, ?, ?, ?, ?)';
 
             $pstm = $this->con->prepare($sql);
             $pstm->bindParam(1, $agenda->__get('titulo'));
-            $pstm->bindParam(2, $agenda->__get('cor'));
-            $pstm->bindParam(3, $agenda->__get('comeco'));
-            $pstm->bindParam(4, $agenda->__get('fim'));
+            $pstm->bindParam(2, $agenda->__get('descricao'));
+            $pstm->bindParam(3, $agenda->__get('cor'));
+            $pstm->bindParam(4, $agenda->__get('cortexto'));
+            $pstm->bindParam(5, $agenda->__get('comeco'));
+            $pstm->bindParam(6, $agenda->__get('fim'));
 
             $pstm->execute();
         } catch (PDOException $erro) {
@@ -56,12 +58,14 @@ class CrudAgenda{
 
     public function editarAgenda(Agenda $agenda){
         try {
-            $sql = 'UPDATE agenda SET titulo=?, cor=?, comeco=?, fim=? WHERE id=?';
+            $sql = 'UPDATE agenda SET titulo=?, descricao=?, cor=?, cortexto=?, comeco=?, fim=? WHERE id=?';
 
             $pstm = $this->con->prepare($sql);
 
             $pstm->bindParam(1, $agenda->__get('titulo'));
+            $pstm->bindParam(1, $agenda->__get('descricao'));
             $pstm->bindParam(2, $agenda->__get('cor'));
+            $pstm->bindParam(2, $agenda->__get('cortexto'));
             $pstm->bindParam(3, $agenda->__get('comeco'));
             $pstm->bindParam(4, $agenda->__get('fim'));
             $pstm->bindParam(5, $agenda->__get('id'));
@@ -72,7 +76,7 @@ class CrudAgenda{
         }
     }
 
-    public function apagarTicket($id){
+    public function apagarAgenda($id){
         try {
             $sql = 'DELETE FROM agenda WHERE id=?';
 

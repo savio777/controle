@@ -2,9 +2,9 @@
 
 require_once '../crud/crudAgenda.php';
 
-$crud = new CrudAgenda();
-
 if($_GET){
+    $crud = new CrudAgenda();
+
     $crud->apagarAgenda($_GET['id']);
     
     header('Location: ../pages/lista_agenda.php');

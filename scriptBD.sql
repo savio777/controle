@@ -30,6 +30,7 @@ CREATE TABLE tickets(
 CREATE TABLE agenda(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(30) NOT NULL,
+    descricao VARCHAR(150),
     cor VARCHAR(10),
     cortexto VARCHAR(10),
     comeco DATETIME NOT NULL,

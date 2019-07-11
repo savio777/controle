@@ -7,7 +7,7 @@ $crud = NULL;
 $agenda = NULL;
 
 if($_POST){
-    $agenda = new Agenda($_POST['titulo'], $_POST['cor'], $_POST['comeco'], $_POST['fim']);
+    $agenda = new Agenda($_POST['titulo'], $_POST['descricao'], $_POST['cor'], $_POST['cortexto'], $_POST['comeco'], $_POST['fim']);
     $crud = new CrudAgenda();
 
     $crud->adicionarAgenda($agenda);
