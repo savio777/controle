@@ -38,8 +38,10 @@ $resultado = $crud->lerTodosTickets();
                             <p><?php echo ($i['criado']) ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="#"><i class="material-icons tiny">remove_red_eye</i></a>
-                            <a href="#"><i class="material-icons tiny">done</i></a>
+                            <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">done</i></a>
+                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
                 </div>
@@ -60,8 +62,10 @@ $resultado = $crud->lerTodosTickets();
                             <p><?php echo ($i['criado']) ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="#"><i class="material-icons tiny">remove_red_eye</i></a>
-                            <a href="#"><i class="material-icons tiny">done</i></a>
+                            <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">done</i></a>
+                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
                 </div>
@@ -82,8 +86,10 @@ $resultado = $crud->lerTodosTickets();
                             <p><?php echo ($i['criado']) ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="#"><i class="material-icons tiny">remove_red_eye</i></a>
-                            <a href="#"><i class="material-icons tiny">done</i></a>
+                            <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">done</i></a>
+                            <a href="detalhesTicket.php?id=<?php echo ($i['id']) ?>">
+                                <i class="material-icons tiny">remove_red_eye</i></a>
                         </div>
                     </div>
                 </div>

@@ -32,7 +32,7 @@ class CrudTicket{
             $pstm->bindParam(1, $id);
             $pstm->execute();
 
-            return $pstm->fetchAll();
+            return $pstm->fetchObject();
         } catch (PDOException $erro) {
             echo($erro->getMessage());
         }

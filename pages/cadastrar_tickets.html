@@ -42,8 +42,14 @@
                         <label class="active" for="criado">Horário/Data atual</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="prioridade" name="prioridade" type="number">
-                        <label class="active" for="prioridade">Prioridade</label>
+                        <select name="prioridade" id="prioridade">
+                            <option value="" disabled selected>Quanto menor o número maior a prioridade</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                        <!--<input id="prioridade" name="prioridade" type="number">-->
+                        <label class="active">Prioridade</label>
                     </div>
                 </div>
                 <button class="btn waves-effect waves-light"><i class="material-icons left">save</i>salvar</button>
@@ -51,8 +57,14 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
 
-    
 </body>
 
 </html>
