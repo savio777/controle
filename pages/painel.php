@@ -14,7 +14,7 @@
     <nav>
         <div class="nav-wrapper blue darken-1">
             <div class="container">
-                <a href="painel.html" class="brand-logo"><img src="../img/logo.png" width="100"></a>
+                <a href="painel.php" class="brand-logo"><img src="../img/logo.png" width="100"></a>
                 <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../pages/lista_produto.php">Produtos</a></li>

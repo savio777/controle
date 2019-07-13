@@ -22,7 +22,7 @@ $resultado = $crud->lerTodoEstoque();
 
 <body>
     <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
+    <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
     <!-- botão para cadastrar produtos -->
     <a class="waves-effect waves-light btn" href="cadastrar_produto.html"><i class="small material-icons left">add</i>Cadastrar Produto</a>
     

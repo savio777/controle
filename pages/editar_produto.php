@@ -23,7 +23,7 @@ if ($_GET) {
 
 <body>
 
-    <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
+    <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a><br><br>
 
     <div class="card-panel teal lighten-2">
         <h1>Cadastrar Produto</h1>

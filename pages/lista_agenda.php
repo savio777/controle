@@ -96,7 +96,7 @@ $resultado = $crud->lerTodaAgenda();
 <body>
     <div class="container">
         <!-- botão voltar -->
-        <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>voltar</a>
+        <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>voltar</a>
         <!-- botão para adicionar novos eventos -->
         <a class="waves-effect waves-light btn" href="adicionar_evento.html"><i class="small material-icons left">add</i>Adicionar Evento</a>
     </div>

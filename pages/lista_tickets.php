@@ -21,7 +21,7 @@ $resultado = $crud->lerTodosTickets();
 
 <body>
     <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="painel.html"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
+    <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
     <!-- botão para cadastrar tickets -->
     <a class="waves-effect waves-light btn" href="cadastrar_tickets.html"><i class="small material-icons left">add</i>Adicionar Tickets</a>
 
