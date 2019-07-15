@@ -6,13 +6,13 @@ CREATE TABLE usuario(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    tipo_user VALUES(30) NOT NULL,  -- root, adm, comum
-    senha VARCHAR(100) NOT NULL,
-    permissaoRoot VARCHAR(1) -- 's' ou 'n'
+    tipo_user VARCHAR(30) NOT NULL,  -- root, adm, comum
+    senha VARCHAR(100) NOT NULL
 );
 
--- usado somente para testes
-INSERT INTO usuario (nomeUser, senha, permissaoRoot) VALUES ('root', '1234', 's');
+-- usuario para testes
+INSERT INTO `usuario`(`nome`, `email`, `tipo_user`, `senha`) 
+    VALUES ('root','iae@gmail.com','root','7110eda4d09e062aa5e4a390b0a572ac0d2c0220');
 
 CREATE TABLE estoque(
     id INT PRIMARY KEY AUTO_INCREMENT,
