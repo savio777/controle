@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +16,14 @@
     <nav>
         <div class="nav-wrapper blue darken-1">
             <div class="container">
-                <a href="painel.php" class="brand-logo"><img src="../img/logo.png" width="100"></a>
+                <a href="painel.php" class="brand-logo center"><img src="../img/logo.png" width="100"></a>
                 <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="painel.php">Bem Vindo <?php echo($_SESSION['usuario_logado']['nome'])?></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../pages/lista_produto.php">Produtos</a></li>
                     <li><a href="../pages/lista_tickets.php">Tickets</a></li>         
                     <li><a href="../pages/lista_agenda.php">Agenda</a></li>                    
-                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i
+                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php?id"><i
                                 class="material-icons small">exit_to_app</i>Sair</a></li>
                 </ul>
 
@@ -34,6 +37,8 @@
                     class="material-icons small left">exit_to_app</i></a></li>
     </ul>
 
+    <br><br><br>
+    <br><br><br>
     <br><br><br>
 
     <footer class="page-footer indigo darken-4">

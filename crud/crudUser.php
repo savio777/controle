@@ -12,20 +12,18 @@ class CrudUser{
     }
 
     // testar se usuario existe para painel
-    public function testUserPainel(Usuario $usuario){
+    public function testUserPainel($usuario){
         try{
-            $sql = 'SELECT * FROM usuario WHERE nomeUser = ? AND senha = ?';
+            $sql = 'SELECT * FROM usuario WHERE nome = ? AND senha = ?';
 
             $pstm = $this->con->prepare($sql);
-            $pstm->bindValue(1, $usuario->getNomeUser());
-            $pstm->bindValue(2, $usuario->getSenha());
+            $pstm->bindValue(1, $usuario['nome']);
+            $pstm->bindValue(2, $usuario['senha']);
             $pstm->execute();
 
-            if($pstm->fetchAll()){
-                return True;
-            }else{
-                return False;
-            }
+            $resultado = $pstm->fetchAll();
+
+            return $resultado;
         }catch(PDOException $erro){
             echo($erro->getMessage());
         }
