@@ -58,17 +58,15 @@ class CrudAgenda{
 
     public function editarAgenda(Agenda $agenda){
         try {
-            $sql = 'UPDATE agenda SET titulo=?, descricao=?, cor=?, cortexto=?, comeco=?, fim=? WHERE id=?';
+            $sql = 'UPDATE agenda SET titulo=?, descricao=?, cor=?, cortexto=? WHERE id=?';
 
             $pstm = $this->con->prepare($sql);
 
-            $pstm->bindParam(1, $agenda->__get('titulo'));
-            $pstm->bindParam(1, $agenda->__get('descricao'));
-            $pstm->bindParam(2, $agenda->__get('cor'));
-            $pstm->bindParam(2, $agenda->__get('cortexto'));
-            $pstm->bindParam(3, $agenda->__get('comeco'));
-            $pstm->bindParam(4, $agenda->__get('fim'));
-            $pstm->bindParam(5, $agenda->__get('id'));
+            $pstm->bindValue(1, $agenda->__get('titulo'));
+            $pstm->bindValue(2, $agenda->__get('descricao'));
+            $pstm->bindValue(3, $agenda->__get('cor'));
+            $pstm->bindValue(4, $agenda->__get('cortexto'));
+            $pstm->bindValue(5, $agenda->__get('id'));
 
             $pstm->execute();
         } catch (PDOException $erro) {

@@ -7,6 +7,8 @@ $getProduto = NULL;
 if ($_GET) {
     $crud = new CrudProduto();
     $getProduto = $crud->retornarPorId($_GET['id']);
+}else{
+    echo('ERRO');
 }
 ?>
 

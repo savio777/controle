@@ -8,21 +8,20 @@ $crud = NULL;
 
 if ($_POST) {
     $agenda = new Agenda(
-        $_POST['nome'],
-        $_POST['numero'],
-        $_POST['rua'],
-        $_POST['bairro'],
-        $_POST['cep'],
-        $_POST['cidade'],
-        $_POST['estado'],
-        $_POST['pais']
+        $_POST['titulo'],
+        $_POST['descricao'],
+        $_POST['cor'],
+        $_POST['cortexto'],
+        NULL,
+        NULL
     );
-    $agenda->setId($_POST['id']);
+
+    $agenda->__set('id', $_POST['id']);
 
     $crud = new CrudAgenda();
     $crud->editarAgenda($agenda);
 
     header('Location: ../pages/lista_agenda.php');
-}else{
+} else {
     echo ('nenhuma requisição');
 }

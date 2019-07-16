@@ -36,7 +36,10 @@ if ($_GET['id']) {
         <i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
     <!-- botão para excluir ticket -->
     <a class="waves-effect waves-light btn" href="../controller/excluirAgenda.php?id=<?php echo ($_GET['id']) ?>">
-        <i class="small material-icons left">done</i>Excluir</a>
+        <i class="small material-icons left">done</i>Feito</a>
+    <!-- botão para editar ticket -->
+    <a class="waves-effect waves-light btn" href="../pages/editar_agenda.php?id=<?php echo ($_GET['id']) ?>">
+        <i class="small material-icons left">edit</i>editar</a>
 
     <h1>Detalhes do Evento</h1>
 

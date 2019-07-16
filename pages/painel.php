@@ -18,23 +18,20 @@
             <div class="container">
                 <a href="painel.php" class="brand-logo center"><img src="../img/logo.png" width="100"></a>
                 <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <a href="painel.php">Bem Vindo <?php echo($_SESSION['usuario_logado']['nome'])?></a>
+                <a href="painel.php">Bem Vindo <?php echo ($_SESSION['usuario_logado']['nome']) ?></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../pages/lista_produto.php">Produtos</a></li>
-                    <li><a href="../pages/lista_tickets.php">Tickets</a></li>         
-                    <li><a href="../pages/lista_agenda.php">Agenda</a></li>                    
-                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php?id"><i
-                                class="material-icons small">exit_to_app</i>Sair</a></li>
+                    <li><a href="../pages/lista_tickets.php">Tickets</a></li>
+                    <li><a href="../pages/lista_agenda.php">Agenda</a></li>
+                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php?id"><i class="material-icons small">exit_to_app</i>Sair</a></li>
                 </ul>
-
             </div>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-teste">
         <li><a href="../pages/lista_produto.php">Produtos</a></li>
-        <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i
-                    class="material-icons small left">exit_to_app</i></a></li>
+        <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i class="material-icons small left">exit_to_app</i></a></li>
     </ul>
 
     <br><br><br>
@@ -51,11 +48,9 @@
                     <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="https://github.com/savio777">Github</a></li>
-                        <li><a class="grey-text text-lighten-3"
-                                href="https://www.linkedin.com/in/s%C3%A1vio-pal%C3%A1cio-fontes-3924aa16b/?originalSubdomain=ie">LinkedIn</a>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/s%C3%A1vio-pal%C3%A1cio-fontes-3924aa16b/?originalSubdomain=ie">LinkedIn</a>
                         </li>
-                        <li><a class="grey-text text-lighten-3"
-                                href="https://www.instagram.com/savioo_fontes/">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/savioo_fontes/">Instagram</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +65,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.sidenav').sidenav();
         });
     </script>
