@@ -17,15 +17,41 @@ $resultado = $crud->lerTodosTickets();
     <title>Tickets</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        h6 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
-    <!-- botão para cadastrar tickets -->
-    <a class="waves-effect waves-light btn" href="cadastrar_tickets.html"><i class="small material-icons left">add</i>Adicionar Tickets</a>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue darken-1">
+                <div class="container">
+                <ul class="right hide-on-med-and-down">
+                    <!-- botão voltar -->
+                    <li><a href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Voltar</a></li>
+                    <!-- botão para cadastrar tickets -->
+                    <li><a href="cadastrar_tickets.html"><i class="small material-icons left">add</i>Adicionar</a></li>
+                    <!-- botão link para prioridade máxima -->
+                    <li><a href="#1"><i class="small material-icons left">looks_one</i>Prioridade Máxima</a></li>
+                    <!-- botão link para prioridade média -->
+                    <li><a href="#2"><i class="small material-icons left">looks_two</i>Prioridade Média</a></li>
+                    <!-- botão link para prioridade mínima -->
+                    <li><a href="#3"><i class="small material-icons left">looks_3</i>Prioridade Mínima</a></li>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <br><br><br>
+
+    <div class="card-panel blue-grey darken-1">
+        <h6 id="1">Prioridade Máxima 1</h6>
+    </div>
+
+    <br>
 
     <div class="row">
         <?php foreach ($resultado as $i) { ?>
@@ -47,6 +73,12 @@ $resultado = $crud->lerTodosTickets();
                 </div>
             <?php }
         } ?>
+    </div>
+
+    <br><br>
+
+    <div class="card-panel blue-grey darken-1">
+        <h6 id="2">Prioridade Média 2</h6>
     </div>
 
     <br>
@@ -71,6 +103,12 @@ $resultado = $crud->lerTodosTickets();
                 </div>
             <?php }
         } ?>
+    </div>
+
+    <br><br>
+
+    <div class="card-panel blue-grey darken-1">
+        <h6 id="3">Prioridade Mínima 3</h6>
     </div>
 
     <br>
