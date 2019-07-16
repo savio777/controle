@@ -1,4 +1,17 @@
-<?php session_start() ?>
+<?php
+
+session_start();
+
+require_once '../crud/crudTicket.php';
+require_once '../crud/crudAgenda.php';
+
+$crudTicket = new CrudTicket;
+$tickets = $crudTicket->lerTodosTickets();
+
+$crudAgenda = new CrudAgenda;
+$agenda = $crudAgenda->lerTodaAgenda();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,33 +23,102 @@
     <link rel="stylesheet" href="../pages/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        h4 {
+            text-align: center;
+        }
+
+        h6 {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper blue darken-1">
-            <div class="container">
-                <a href="painel.php" class="brand-logo center"><img src="../img/logo.png" width="100"></a>
-                <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <a href="painel.php">Bem Vindo <?php echo ($_SESSION['usuario_logado']['nome']) ?></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="../pages/lista_produto.php">Produtos</a></li>
-                    <li><a href="../pages/lista_tickets.php">Tickets</a></li>
-                    <li><a href="../pages/lista_agenda.php">Agenda</a></li>
-                    <li><a class="waves-effect waves-light btn" href="../controller/sair.php?id"><i class="material-icons small">exit_to_app</i>Sair</a></li>
-                </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue darken-1">
+                <div class="container">
+                    <a href="painel.php" class="brand-logo center"><img src="../img/logo.png" width="100"></a>
+                    <a href="#" data-target="mobile-teste" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="painel.php">Bem Vindo <?php echo ($_SESSION['usuario_logado']['nome']) ?></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../pages/lista_produto.php">Produtos</a></li>
+                        <li><a href="../pages/lista_tickets.php">Tickets</a></li>
+                        <li><a href="../pages/lista_agenda.php">Agenda</a></li>
+                        <li><a class="waves-effect waves-light btn" href="../controller/sair.php?id"><i class="material-icons small">exit_to_app</i>Sair</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <ul class="sidenav" id="mobile-teste">
         <li><a href="../pages/lista_produto.php">Produtos</a></li>
-        <li><a class="waves-effect waves-light btn" href="../controller/sair.php"><i class="material-icons small left">exit_to_app</i></a></li>
+        <li><a href="../pages/lista_tickets.php">Tickets</a></li>
+        <li><a href="../pages/lista_agenda.php">Agenda</a></li>
+        <li><a class="waves-effect waves-light btn" href="../controller/sair.php">
+                <i class="material-icons small left">exit_to_app</i></a></li>
     </ul>
 
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
+    <br><br><br><br>
+
+    <div class="container">
+        <div class="card-panel green accent-2">
+            <h4>Tickets</h4>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <?php foreach ($tickets as $i) { ?>
+                <?php if ($i['prioridade'] == 1) { ?>
+                    <div class="col s10 m2">
+                        <div class="card purple darken-4">
+                            <div class="card-content white-text">
+                                <span class="card-title"><?php echo ($i['titulo']) ?></span>
+                                <p><?php echo ($i['descricao']) ?></p>
+                                <p><?php echo ($i['criado']) ?></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="../controller/excluirTicket.php?id=<?php echo ($i['id']) ?>">
+                                    <i class="material-icons tiny">done</i></a>
+                                <a href="detalhes_ticket.php?id=<?php echo ($i['id']) ?>">
+                                    <i class="material-icons tiny">remove_red_eye</i></a>
+                            </div>
+                        </div>
+                    </div>
+                <?php }
+            } ?>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="card-panel green accent-2">
+            <h4>Agenda</h4>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <?php foreach ($agenda as $i) { ?>
+                <a href="detalhes_agenda.php?id=<?php echo ($i['id']) ?>">
+                    <div class="card-panel purple darken-4">
+                        <?php echo ($i['titulo']) ?> -- Começo Evento: <?php echo ($i['comeco']) ?> | 
+                            <?php if ($i['fim'] != '0000-00-00 00:00:00') echo ($i['fim']) ?>
+                    </div>
+                </a>
+            <?php } ?>
+        </div>
+    </div>
+
+    <br><br>
 
     <footer class="page-footer indigo darken-4">
         <div class="container">
