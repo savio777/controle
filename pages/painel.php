@@ -75,7 +75,7 @@ $agenda = $crudAgenda->lerTodaAgenda();
         <div class="row">
             <?php foreach ($tickets as $i) { ?>
                 <?php if ($i['prioridade'] == 1) { ?>
-                    <div class="col s10 m2">
+                    <div class="col s10 m3">
                         <div class="card purple darken-4">
                             <div class="card-content white-text">
                                 <span class="card-title"><?php echo ($i['titulo']) ?></span>
