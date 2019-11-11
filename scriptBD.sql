@@ -1,6 +1,6 @@
-CREATE DATABASE estoque;
+CREATE DATABASE controle;
 
-USE estoque;
+USE controle;
 
 CREATE TABLE usuario(
     id INT PRIMARY KEY AUTO_INCREMENT,
