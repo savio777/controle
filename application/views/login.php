@@ -39,7 +39,7 @@ $url_base = 'http://localhost/estoque-web-php'
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Logar
+                <button class="blue btn waves-effect waves-light" type="submit" name="action">Logar
                   <i class="material-icons right">send</i>
                 </button>
               </div>
