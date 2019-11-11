@@ -46,7 +46,7 @@ if (
           <ul class="right hide-on-med-and-down">
             <li><a href="../pages/lista_produto.php">Produtos</a></li>
             <li><a href="../pages/lista_tickets.php">Tickets</a></li>
-            <li><a href="../pages/lista_agenda.php">Agenda</a></li>
+            <li><a href="../index.php/agenda">Agenda</a></li>
             <li>
               <a class="blue waves-effect waves-light btn" href="../index.php/usuario/logout">
                 <i class="material-icons small">exit_to_app</i>Sair
@@ -78,24 +78,26 @@ if (
 
   <div class="container">
     <div class="row">
-      <?php foreach ($tickets as $i) { ?>
-        <?php if ($i->prioridade == 1) { ?>
-          <div class="col s10 m3">
-            <div class="card purple darken-4">
-              <div class="card-content white-text">
-                <span class="card-title"><?php echo ($i->titulo) ?></span>
-                <p><?php echo ($i->descricao) ?></p>
-                <p><?php echo ($i->criado) ?></p>
-              </div>
-              <div class="card-action">
-                <a href="../controller/excluirTicket.php?id=<?php echo ($i->id) ?>">
-                  <i class="material-icons tiny">done</i></a>
-                <a href="detalhes_ticket.php?id=<?php echo ($i->id) ?>">
-                  <i class="material-icons tiny">remove_red_eye</i></a>
+      <?php if (!empty($tickets[0]->prioridade)) { ?>
+        <?php foreach ($tickets as $i) { ?>
+          <?php if ($i->prioridade == 1) { ?>
+            <div class="col s10 m3">
+              <div class="card purple darken-4">
+                <div class="card-content white-text">
+                  <span class="card-title"><?php echo ($i->titulo) ?></span>
+                  <p><?php echo ($i->descricao) ?></p>
+                  <p><?php echo ($i->criado) ?></p>
+                </div>
+                <div class="card-action">
+                  <a href="../controller/excluirTicket.php?id=<?php echo ($i->id) ?>">
+                    <i class="material-icons tiny">done</i></a>
+                  <a href="detalhes_ticket.php?id=<?php echo ($i->id) ?>">
+                    <i class="material-icons tiny">remove_red_eye</i></a>
+                </div>
               </div>
             </div>
-          </div>
       <?php }
+        }
       } ?>
     </div>
   </div>
@@ -112,14 +114,16 @@ if (
 
   <div class="container">
     <div class="row">
-      <?php foreach ($agenda as $i) { ?>
-        <a href="detalhes_agenda.php?id=<?php echo ($i->id) ?>">
-          <div class="card-panel purple darken-4">
-            <?php echo ($i->titulo) ?> -- Começo Evento: <?php echo ($i->comeco) ?> |
-            <?php if ($i->fim != '0000-00-00 00:00:00') echo ($i->fim) ?>
-          </div>
-        </a>
-      <?php } ?>
+      <?php if (!empty($agenda[0]->id)) {  ?>
+        <?php foreach ($agenda as $i) { ?>
+          <a href="detalhes_agenda.php?id=<?php echo ($i->id) ?>">
+            <div class="card-panel purple darken-4">
+              <?php echo ($i->titulo) ?> -- Começo Evento: <?php echo ($i->comeco) ?> |
+              <?php if ($i->fim != '0000-00-00 00:00:00') echo ($i->fim) ?>
+            </div>
+          </a>
+      <?php }
+      } ?>
     </div>
   </div>
 
