@@ -16,8 +16,8 @@ class Home extends CI_Controller
     public function index()
     {
         $data = array(
-            'tickets' => $this->Tickets_model->pegar(),
-            'agenda' => $this->Agenda_model->pegar(),
+            'tickets' => array_reverse($this->Tickets_model->pegar()),
+            'agenda' => array_reverse($this->Agenda_model->pegar()),
             'usuario' => $this->session
         );
         $this->load->view('painel', $data);
