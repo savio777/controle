@@ -44,7 +44,7 @@ $url_base = 'http://localhost/estoque-web-php/assets';
               end: '<?php echo ($i->fim) ?>',
               color: '<?php echo ($i->cor) ?>',
               textColor: '<?php echo ($i->cortexto) ?>',
-              url: 'agenda/detalhes/<?php echo ($i->id) ?>'
+              url: '../index.php/agenda/detalhes/<?php echo ($i->id) ?>'
             },
           <?php } ?>
 

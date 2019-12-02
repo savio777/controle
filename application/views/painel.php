@@ -31,7 +31,7 @@ if (
   </style>
 </head>
 
-<body>
+<body class="indigo lighten-4"
   <div class="navbar-fixed">
     <nav class="black">
       <div class="nav-wrapper">

@@ -33,6 +33,13 @@ class Agenda extends CI_Controller
     public function cadastrar()
     {
         $this->Agenda_model->inserir($this->input->post());
-        $this->index();
+        header('Location: ../agenda');
     }
+
+    public function feito($id)
+    {
+        $this->Agenda_model->remover($id);
+        header('Location: ../../agenda');
+    }
+
 }
