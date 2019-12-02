@@ -89,7 +89,7 @@ $url_base = 'http://localhost/estoque-web-php/assets';
 <body>
   <div class="container">
     <!-- botão voltar -->
-    <a class="waves-effect waves-light btn" href="../home">
+    <a class="waves-effect waves-light btn" href="../index.php/home">
       <i class="small material-icons left">keyboard_arrow_left</i>voltar
     </a>
     <!-- botão para adicionar novos eventos -->
