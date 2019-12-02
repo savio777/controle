@@ -23,13 +23,13 @@ $url_base = 'http://localhost/estoque-web-php/assets';
 
 <body>
   <!-- botão voltar -->
-  <a class="waves-effect waves-light btn" href="../../home">
+  <a class="waves-effect waves-light btn" href="../../agenda">
     <i class="small material-icons left">keyboard_arrow_left</i>Voltar</a>
   <!-- botão para excluir ticket -->
   <a class="waves-effect waves-light btn" href="../feito/<?php echo $resultado[0]->id ?>">
     <i class="small material-icons left">done</i>Feito</a>
   <!-- botão para editar ticket -->
-  <a class="waves-effect waves-light btn" href="../pages/editar_agenda.php?id=">
+  <a class="waves-effect waves-light btn" href="../editar/<?php echo $resultado[0]->id ?>">
     <i class="small material-icons left">edit</i>editar</a>
 
   <h1>Detalhes do Evento</h1>

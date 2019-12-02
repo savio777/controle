@@ -1,5 +1,7 @@
 <?php
 
+defined('BASEPATH') or exit('No direct script access allowed');
+
 class Agenda extends CI_Controller
 {
 
@@ -28,6 +30,12 @@ class Agenda extends CI_Controller
         $this->load->view('agenda/detalhe', array('resultado' => $data));
     }
 
+    public function editar($id)
+    {
+        $data = $this->Agenda_model->pegarId($id);
+        $this->load->view('agenda/editar', array('resultado' => $data));
+    }
+
     // banco de dados
 
     public function cadastrar()
@@ -40,6 +48,12 @@ class Agenda extends CI_Controller
     {
         $this->Agenda_model->remover($id);
         header('Location: ../../agenda');
+    }
+
+    public function editar_evento()
+    {
+        $this->Agenda_model->editar($this->input->post());
+        header('Location: ../../index.php/agenda');
     }
 
 }
