@@ -20,30 +20,10 @@ if (
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel</title>
+  <title>Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <style>
-    h4 {
-      text-align: center;
-    }
-
-    h6 {
-      color: white;
-    }
-
-    nav {
-      background-color: #00171F
-    }
-
-    footer {
-      background-color: #003459
-    }
-
-    .card-panel {
-      background-color: #007EA7
-    }
-  </style>
+  <link rel="stylesheet" href="<?php echo $url_base ?>/assets/styles/painel.css">
 </head>
 
 <body class="indigo lighten-4">
@@ -52,7 +32,7 @@ if (
       <div class="nav-wrapper">
         <div class="container">
           <a href="#" class="brand-logo center">
-            <img src="<?php echo $url_base ?>/assets/logo.png" width="100">
+            <img src="<?php echo $url_base ?>/assets/img/logo.png" width="100">
           </a>
           <a href="#" data-target="mobile-teste" class="sidenav-trigger">
             <i class="material-icons">menu</i>
@@ -84,7 +64,7 @@ if (
   <br><br><br><br>
 
   <div class="container">
-    <div class="card-panel white-text">
+    <div id="card-title" class="card-panel white-text">
       <h4>Tickets</h4>
     </div>
   </div>
@@ -97,7 +77,7 @@ if (
         <?php for ($i = 0; $i < 3; $i++) { ?>
           <?php if ($tickets[$i]->prioridade == 1) { ?>
             <div class="col s10 m3">
-              <div class="card purple darken-4">
+              <div id="cards" class="card darken-4">
                 <div class="card-content white-text">
                   <span class="card-title"><?php echo ($i->titulo) ?></span>
                   <p><?php echo $tickets[$i]->descricao ?></p>
@@ -120,7 +100,7 @@ if (
   <br><br>
 
   <div class="container">
-    <div class="card-panel white-text">
+    <div id="card-title" class="card-panel white-text">
       <h4>Agenda</h4>
     </div>
   </div>
@@ -132,7 +112,7 @@ if (
       <?php if (!empty($agenda[0]->id)) {  ?>
         <?php for ($i = 0; $i < 3; $i++) { ?>
           <a href="agenda/detalhes/<?php echo $agenda[$i]->id ?>">
-            <div class="card-panel purple darken-4 white-text">
+            <div id="cards" class="card-panel white-text">
               <?php echo ($agenda[$i]->titulo) ?> -- Começo Evento: <?php echo $agenda[$i]->comeco ?> |
               <?php if ($agenda[$i]->fim != '0000-00-00 00:00:00') echo $agenda[$i]->fim ?>
             </div>
@@ -168,7 +148,7 @@ if (
     </div>
     <div class="footer-copyright">
       <div class="container white-text">
-        © 2019 SDeV Copyright
+        © 2019 SDeV Copyright<i class="material-icons right">developer_mode</i>
       </div>
     </div>
   </footer>

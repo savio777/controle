@@ -1,0 +1,27 @@
+h4 {
+  text-align: center;
+}
+
+h6 {
+  color: white;
+}
+
+nav {
+  background-color: #00171F;
+}
+
+footer {
+  background-color: #003459;
+}
+
+#card-title {
+  background-color: #00A8E8;
+}
+
+#cards{
+  background-color: #007EA7;
+}
+
+.footer-copyright{
+  background-color: #003154;
+}

@@ -12,13 +12,13 @@ $url_base = 'http://localhost/controle'
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="<?php echo $url_base ?>/assets/login.css">
+  <link rel="stylesheet" href="<?php echo $url_base ?>/assets/styles/login.css">
 </head>
 
 <body>
   <div class="container">
     <div class="card-panel white-text">
-      <h4>Logar</h4>
+      <h4>Login - Sistema Controle</h4>
     </div>
   </div>
 
@@ -39,7 +39,7 @@ $url_base = 'http://localhost/controle'
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <button class="blue btn waves-effect waves-light" type="submit" name="action">Logar
+                <button class="btn waves-effect waves-light" type="submit" name="action">Logar
                   <i class="material-icons right">send</i>
                 </button>
               </div>

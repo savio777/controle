@@ -16,7 +16,6 @@ $url_base = 'http://localhost/controle/assets';
     h1 {
       color: <?php echo ($resultado[0]->cortexto) ?>;
       background-color: <?php echo ($resultado[0]->cor) ?>;
-
     }
   </style>
 </head>
