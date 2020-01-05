@@ -27,15 +27,28 @@ if (
     h4 {
       text-align: center;
     }
+
     h6 {
       color: white;
+    }
+
+    nav {
+      background-color: #00171F
+    }
+
+    footer {
+      background-color: #003459
+    }
+
+    .card-panel {
+      background-color: #007EA7
     }
   </style>
 </head>
 
 <body class="indigo lighten-4">
   <div class="navbar-fixed">
-    <nav class="black">
+    <nav>
       <div class="nav-wrapper">
         <div class="container">
           <a href="#" class="brand-logo center">
@@ -71,7 +84,7 @@ if (
   <br><br><br><br>
 
   <div class="container">
-    <div class="card-panel blue">
+    <div class="card-panel white-text">
       <h4>Tickets</h4>
     </div>
   </div>
@@ -107,7 +120,7 @@ if (
   <br><br>
 
   <div class="container">
-    <div class="card-panel blue">
+    <div class="card-panel white-text">
       <h4>Agenda</h4>
     </div>
   </div>
@@ -119,7 +132,7 @@ if (
       <?php if (!empty($agenda[0]->id)) {  ?>
         <?php for ($i = 0; $i < 3; $i++) { ?>
           <a href="agenda/detalhes/<?php echo $agenda[$i]->id ?>">
-            <div class="card-panel purple darken-4">
+            <div class="card-panel purple darken-4 white-text">
               <?php echo ($agenda[$i]->titulo) ?> -- Começo Evento: <?php echo $agenda[$i]->comeco ?> |
               <?php if ($agenda[$i]->fim != '0000-00-00 00:00:00') echo $agenda[$i]->fim ?>
             </div>
@@ -131,14 +144,14 @@ if (
 
   <br><br>
 
-  <footer class="page-footer blue-grey">
+  <footer>
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Site Demo</h5>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text"><i class="material-icons left">people</i>Links</h5>
           <ul>
             <li>
               <a class="grey-text text-lighten-3" href="<?php echo $url_github ?>">Github</a>
@@ -154,7 +167,7 @@ if (
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
+      <div class="container white-text">
         © 2019 SDeV Copyright
       </div>
     </div>

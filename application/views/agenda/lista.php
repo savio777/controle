@@ -11,6 +11,7 @@ $url_base = 'http://localhost/controle/assets';
 <head>
   <title>Agenda</title>
   <meta charset='utf-8'>
+  <!-- chamada da biblioteca do calendario -->
   <link href='<?php echo $url_base ?>/packages/core/main.css' rel='stylesheet' />
   <link href='<?php echo $url_base ?>/packages/daygrid/main.css' rel='stylesheet' />
   <link href='<?php echo $url_base ?>/packages/timegrid/main.css' rel='stylesheet' />
@@ -86,7 +87,7 @@ $url_base = 'http://localhost/controle/assets';
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="blue-grey lighten-5">
   <div class="container">
     <!-- botão voltar -->
     <a class="waves-effect waves-light btn" href="../index.php/home">
