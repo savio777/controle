@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$url_base = 'http://localhost/estoque-web-php';
+$url_base = 'http://localhost/controle';
 $url_github = 'https://github.com/savio777';
 $url_linkedin = 'https://www.linkedin.com/in/s%C3%A1vio-pal%C3%A1cio-fontes-3924aa16b/?originalSubdomain=ie';
 $url_instagram = 'https://www.instagram.com/savioo_fontes/';

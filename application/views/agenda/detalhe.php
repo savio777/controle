@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-$url_base = 'http://localhost/estoque-web-php/assets';
+$url_base = 'http://localhost/controle/assets';
 ?>
 
 <!DOCTYPE html>
