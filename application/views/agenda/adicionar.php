@@ -15,9 +15,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
   <!-- botão voltar -->
-  <a class="waves-effect waves-light btn" href="painel.php"><i class="small material-icons left">keyboard_arrow_left</i>Cancelar</a>
-  <br><br>
   <div class="card-panel teal lighten-2">
+    <a class="waves-effect waves-light btn" href="../agenda"><i class="small material-icons left">keyboard_arrow_left</i>Cancelar</a>
     <h2>Adicionar Agenda</h2>
   </div>
 
